@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const data = [{"title": "home","url" : "/"},{"title" : "producten","url" : "/producten/"},{"title": "Overons","url" : "/overons/"},{"title": "contact","url" : "/contact/"}];
+
+        function createNav(data) {
+            const ul = document.createElement("ul");
+            document.body.appendChild(ul);
+
+            data.forEach(item => {
+                const li = document.createElement("li");
+                ul.appendChild(li);
+
+                const a = document.createElement("a");
+                a.innerHTML = item.title;
+                a.href = item.url;
+                li.appendChild(a);
+            });
+        }
+        createNav(data);
+    </script>
+</body>
+</html>
