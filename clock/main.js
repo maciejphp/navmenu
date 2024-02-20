@@ -4,7 +4,7 @@ import { FontLoader } from 'three/addons/loaders/FontLoader.js';
 import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
-const maxTemperature = 100;
+const maxTemperature = 200;
 
 
 const width = window.innerWidth, height = window.innerHeight;

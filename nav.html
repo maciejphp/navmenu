@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <button>hamberger menu</button>
     <script>
         const data = [{"title": "home","url" : "/"},{"title" : "producten","url" : "/producten/"},{"title": "Overons","url" : "/overons/"},{"title": "contact","url" : "/contact/"}];
 
@@ -24,6 +25,20 @@
             });
         }
         createNav(data);
+
+        const hamburger = document.querySelector("button");
+        let visible = true;
+
+        hamburger.addEventListener("click", () => {
+            const ul = document.querySelector("ul");
+            if (visible) {
+                ul.style.display = "none";
+                visible = false;
+            }else {
+                ul.style.display = "block";
+                visible = true;
+            }
+        })
     </script>
 </body>
 </html>
